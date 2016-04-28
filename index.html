@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+var currentDate = new Date();
+ 
+// Find the current time zone's offset in milliseconds.
+var timezoneOffset = currentDate.getTimezoneOffset() * 60 * 1000;
+ 
+// Subtract the time zone offset from the current UTC date, and pass
+//  that into the Date constructor to get a date whose UTC date/time is
+//  adjusted by timezoneOffset for display purposes.
+var localDate = new Date(currentDate.getTime() - timezoneOffset);
+ 
+// Get that local date's ISO date string and remove the Z.
+var localDateISOString = localDate.toISOString().replace('Z', '');
+// Remove the 'Z' by replacing it with an empty string.
+document.getElementById('date_start').value = ISODate.replace('Z', '');
+alert(currentDate);
+document.write("test");
+</script>
+
+</body>
+</html>
